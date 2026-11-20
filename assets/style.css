@@ -85,6 +85,12 @@ h3{font-size:17px;line-height:1.35;margin:28px 0 6px;color:var(--strong)}
 .cv h3{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .cv h3 .when{font-weight:400}
 .cv ul{margin:6px 0 0;padding-left:20px;font-size:15px}
+.notes{margin:36px 0 28px;padding:22px 24px 14px;border:1px solid var(--accent);outline:1px solid var(--accent);outline-offset:4px;border-radius:2px;background:color-mix(in srgb,var(--accent) 5%,transparent)}
+.notes h3{margin:0 0 12px;font:italic 500 26px/1.1 "Cormorant Garamond",Georgia,serif;text-align:center}
+.notes dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;margin:0;font-size:15px}
+.notes dt{font:12px/1.9 "DM Mono",monospace;color:var(--accent);text-transform:lowercase}
+.notes dt::before{content:"✦ ";font-size:10px}
+.notes dd{margin:0}
 .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
 .chips li{font:13px "DM Mono",monospace;border:1px solid var(--rule);padding:4px 10px;border-radius:99px}
 
@@ -101,6 +107,7 @@ footer{position:relative;margin-top:64px;padding-bottom:12px;border-top:1px soli
 .ticker::before{left:0;background:linear-gradient(90deg,var(--bar),transparent)}.ticker::after{right:0;background:linear-gradient(-90deg,var(--bar),transparent)}
 
 @media(max-width:600px){
+  .notes{padding:18px 16px 10px}.notes dl{grid-template-columns:minmax(0,1fr);gap:0}.notes dd{margin-bottom:10px}
   .wrap{padding:28px 18px 20px}
   header h1{font-size:20px}
   nav{gap:0 12px;font-size:12px;flex-wrap:nowrap;justify-content:space-between}nav span{display:none}

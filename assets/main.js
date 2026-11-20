@@ -55,5 +55,5 @@ function show(){const id=(location.hash||'#home').slice(1);const p=pages.some(x=
 addEventListener('hashchange',show);show();
 // email assembled at runtime so address harvesters don't see it in the HTML
 const ml=document.getElementById('mail');
-if(ml){const a=[ml.dataset.u,ml.dataset.d].join(String.fromCharCode(64));ml.href='mai'+'lto:'+a;ml.textContent=a;}
+if(ml){const a=[ml.dataset.u,ml.dataset.d].join(String.fromCharCode(64));ml.href='mai'+'lto:'+a;ml.setAttribute('aria-label','Email Sam');}
 }

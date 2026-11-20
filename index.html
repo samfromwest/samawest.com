@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index, follow, noai, noimageai, max-image-preview:standard">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Samantha A. West</title>
 <meta name="description" content="Samantha A. West — audio producer, theatre-maker, and poet in New York. Audiobooks, podcasts, sound design, and writing.">
@@ -14,128 +17,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#1b4d57">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b4d57'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='34' fill='%23c9e4e6' text-anchor='middle'%3ESW%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=DM+Mono:wght@400;500&family=Inter:wght@400;600;700&display=swap">
-<style>
-/* VOICE: warm, personal, a little theatrical — a gallery of work, not a sales page (after sosa.fyi)
-   IDEA: a sound booth / stage — the page behaves like a program for a show heard more than seen
-   PICTURE: Sam's portrait, centred in a deep-teal frame like the painting on sosa.fyi
-   COLOUR and TYPE: pale teal ground, deep teal ink and frame; DM Mono for name/nav, Inter body, Cormorant italic for the marquee
-   LAYOUT: single 660px column like sosa.fyi — name, tagline, rule, pipe nav, picture, intro, list, footer, quote ticker */
-:root{--bg:#c9e4e6;--ink:#1f3236;--strong:#0f2226;--muted:#3f5c61;--accent:#155f69;--rule:#7fb0b5;--frame:#1b4d57}
-:root{color-scheme:light dark;
-  --bg:light-dark(#c9e4e6,#10242a);
-  --ink:light-dark(#1f3236,#dcefef);
-  --strong:light-dark(#0f2226,#f3fbfb);
-  --muted:light-dark(#3f5c61,#8fb3b5);
-  --accent:light-dark(#155f69,#6fd0cf);
-  --rule:light-dark(#7fb0b5,#2e4f56);
-  --frame:light-dark(#1b4d57,#0a181c);
-  --bar:#0d2226}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
-*{box-sizing:border-box;min-width:0}
-html{scroll-padding-top:72px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-::selection{background:var(--accent);color:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,-apple-system,"Segoe UI",sans-serif;overflow-x:clip;padding-bottom:calc(64px + env(safe-area-inset-bottom))}
-.wrap{max-width:660px;margin:0 auto;padding:40px 20px 24px}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-
-header h1{font:500 22px/1.6 "DM Mono",Monaco,monospace;margin:0;color:var(--strong)}
-header h1 a{color:inherit;text-decoration:none}
-header p{font-style:italic;font-size:15px;margin:6px 0 18px}
-header{border-bottom:2px solid var(--strong);box-shadow:0 3px 0 var(--bg),0 4px 0 var(--strong)}
-header h1 a::after{content:" ✦";color:var(--accent);font-size:.6em;vertical-align:.35em}
-nav{font:13px/1.7 "DM Mono",Monaco,monospace;padding:14px 0 8px;margin-top:4px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:0 4px}
-nav a{color:var(--accent);text-decoration:none;padding:10px 0}
-nav a[aria-current=page]{color:var(--strong);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:6px}
-nav a:hover{color:var(--strong)}
-nav span{color:var(--rule);padding:10px 8px}
-
-.view{display:none;padding-top:30px}
-.view.on,html:not(.js) #v-home{display:block}
-.view.on{animation:rise .45s ease both}
-@keyframes rise{from{opacity:0;transform:translateY(6px)}}
-h2{font:italic 500 36px/1.05 "Cormorant Garamond",Georgia,serif;letter-spacing:-.2px;margin:40px 0 16px;color:var(--strong);text-wrap:balance}
-h3{font-size:17px;line-height:1.35;margin:28px 0 6px;color:var(--strong)}
-.orn{display:flex;align-items:center;gap:14px;color:var(--accent);margin:48px 0 0;font-size:14px;letter-spacing:6px}
-.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--rule))}
-.orn::after{background:linear-gradient(90deg,var(--rule),transparent)}
-.orn+h2{margin-top:22px}
-.lede::first-letter{float:left;font:600 italic 64px/.8 "Cormorant Garamond",Georgia,serif;color:var(--accent);padding:6px 10px 0 0}
-
-
-
-.hero{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start}.hero figure{margin:0}.ph{position:relative;display:block}.ph::before{content:"";position:absolute;inset:12px -12px -12px 12px;border:1px solid var(--accent);border-radius:2px;opacity:.6}
-.hero img{position:relative;width:100%;height:auto;display:block;border-radius:2px;border:6px solid var(--frame);box-shadow:0 10px 24px -14px rgba(8,30,34,.55)}
-.hero figcaption{font:12px "DM Mono",monospace;color:var(--muted);margin-top:22px;text-align:center}.hero p:first-child{margin-top:0}
-
-/* lists, like "Recent Writing" */
-.list{border-top:1px solid var(--rule)}
-.list details{border-bottom:1px solid var(--rule)}
-.list summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:14px 92px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:12px 0;min-height:44px}
-.list summary::-webkit-details-marker{display:none}
-.list summary,.list a.row{transition:background .2s,padding .2s;border-radius:2px}
-@media(hover:hover){.list summary:hover,.list a.row:hover{background:color-mix(in srgb,var(--accent) 7%,transparent);padding-inline:8px}}
-.list details[open]{background:color-mix(in srgb,var(--accent) 5%,transparent)}
-.list details[open] summary{padding-inline:8px}
-.list details[open] ul{padding-right:12px}
-.list a.row::before{transition:transform .2s}.list a.row:hover::before{transform:translateX(3px)}
-.list summary::before{content:"+";color:var(--accent);font-family:"DM Mono",monospace}
-.list details[open] summary::before{content:"–"}
-.when{font:12px "DM Mono",monospace;color:var(--muted);white-space:nowrap}
-.what{font-weight:700;color:var(--strong);line-height:1.35}
-.what small{display:block;font-weight:400;color:var(--muted);font-size:13px}
-.tag{font:12px "DM Mono",monospace;color:var(--accent);text-transform:uppercase;white-space:nowrap}
-.list ul{margin:0 0 14px;padding:0 0 0 128px;font-size:15px}
-.list li{margin:3px 0}
-
-.list a.row{display:grid;grid-template-columns:14px 92px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:12px 0;min-height:44px;border-bottom:1px solid var(--rule);text-decoration:none}
-.list a.row::before{content:"→";color:var(--accent);font-family:"DM Mono",monospace}
-.list a.row:hover .what{text-decoration:underline}
-.cv h3{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.cv h3 .when{font-weight:400}
-.cv ul{margin:6px 0 0;padding-left:20px;font-size:15px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
-.chips li{font:13px "DM Mono",monospace;border:1px solid var(--rule);padding:4px 10px;border-radius:99px}
-
-footer::before{content:"❧";position:absolute;left:50%;top:-14px;transform:translateX(-50%);background:var(--bg);color:var(--accent);padding:0 12px;font-size:18px;line-height:1}
-footer{position:relative;margin-top:64px;padding-bottom:12px;border-top:1px solid var(--rule);padding-top:16px;font:13px "DM Mono",monospace;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px;justify-content:space-between}
-
-/* quote ticker */
-.ticker{border-top:1px solid var(--rule);position:fixed;left:0;right:0;bottom:0;height:calc(52px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:var(--bar);color:#d8f0ee;overflow:hidden;display:flex;align-items:center;z-index:5}
-.track{display:flex;white-space:nowrap;animation:scroll 60s linear infinite;font:500 italic 20px "Cormorant Garamond",Georgia,serif}
-.track>*{flex:none}.track span{padding:0 28px}
-.track b{color:#5cc2bd;font-style:normal;font-weight:400}
-@keyframes scroll{to{transform:translateX(-50%)}}
-.ticker::before,.ticker::after{content:"";position:absolute;top:0;bottom:0;width:60px;z-index:1;pointer-events:none}
-.ticker::before{left:0;background:linear-gradient(90deg,var(--bar),transparent)}.ticker::after{right:0;background:linear-gradient(-90deg,var(--bar),transparent)}
-
-@media(max-width:600px){
-  .wrap{padding:28px 18px 20px}
-  header h1{font-size:20px}
-  nav{gap:0 12px;font-size:12px;flex-wrap:nowrap;justify-content:space-between}nav span{display:none}
-  .list summary,.list a.row{row-gap:2px}
-  .list ul{padding-left:30px}
-  h2{font-size:32px}
-  .orn{margin-top:40px}
-  .hero{gap:30px}.hero figure{max-width:300px;margin-right:12px}
-  .ticker{height:calc(44px + env(safe-area-inset-bottom))}
-  .track{font-size:17px}
-  body{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
-  footer{justify-content:center;text-align:center}
-  .lede::first-letter{font-size:54px}
-  .list summary{grid-template-columns:14px minmax(0,1fr) auto}
-  .list .when{grid-column:2;grid-row:1}
-  .list .what{grid-column:2;grid-row:2}
-  .list a.row .tag{grid-column:3;grid-row:1}
-  .list .tag{grid-column:3;grid-row:1}
-  .list ul{padding-left:24px}
-  .list a.row{grid-template-columns:14px minmax(0,1fr) auto}
-  .hero{grid-template-columns:minmax(0,1fr)}.hero img{max-width:260px}
-}
-@media(prefers-reduced-motion:reduce){.track,.view.on{animation:none}.list summary,.list a.row{transition:none}}
-</style>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <div class="wrap">
@@ -159,12 +42,12 @@ footer{position:relative;margin-top:64px;padding-bottom:12px;border-top:1px soli
     <div class="orn" aria-hidden="true">✦ ✦ ✦</div>
     <h2>Now playing</h2>
     <div class="list" id="now"></div>
-    <p style="margin-top:14px"><a href="#audio">All audio work</a> · <a href="#theatre">All theatre work</a></p>
+    <p class="more"><a href="#audio">All audio work</a> · <a href="#theatre">All theatre work</a></p>
 
     <div class="orn" aria-hidden="true">✦ ✦ ✦</div>
     <h2>Recent writing</h2>
     <div class="list" id="recent"></div>
-    <p style="margin-top:14px"><a href="#writing">All writing</a></p>
+    <p class="more"><a href="#writing">All writing</a></p>
   </section>
 
   <!-- ABOUT -->
@@ -228,7 +111,7 @@ footer{position:relative;margin-top:64px;padding-bottom:12px;border-top:1px soli
 
   <footer>
     <span>Samantha A. West · 2026</span>
-    <span><a href="https://samawest.substack.com/">substack</a> | <a href="mailto:samwest.1620@gmail.com">samwest.1620@gmail.com</a></span>
+    <span><a href="https://samawest.substack.com/">substack</a> | <a id="mail" data-u="samwest.1620" data-d="gmail.com" href="#about">email</a></span>
   </footer>
 </div>
 
@@ -236,63 +119,6 @@ footer{position:relative;margin-top:64px;padding-bottom:12px;border-top:1px soli
   <div class="track" id="track" aria-hidden="true"></div>
 </div>
 
-<script>
-{
-document.documentElement.classList.add('js');
-const pages=[["home","home"],["about","about"],["audio","audio"],["theatre","theatre"],["writing","writing"],["resume","résumé"]];
-const nav=document.getElementById('nav');
-nav.innerHTML=pages.map(([id,l],i)=>(i?'<span>|</span>':'')+`<a href="#${id}" data-p="${id}">${l}</a>`).join('');
-
-const audio=[
-  {when:"2026 – now",what:"The Bells I Hear & Threads of Voices",sub:"Podcast Producer, Mentor A Promise",tag:"podcast",pts:["Planning Season 2 of two shows: one on homelessness and solutions to the crisis, one on creative expression and identity.","Manage a team of editors and hosts producing 3 episodes a month; run timelines and guest outreach."]},
-  {when:"2023 – now",what:"Audiobooks at Simon & Schuster",sub:"Associate Producer of Audio",tag:"audiobook",pts:["Produced 60+ titles, managing logistics with studios, engineers, authors, and actors.","Directed titles and author features in studio, including Root Therapy by Felicia Leatherwood and Issa Rae.","Edit and engineer raw audio in Pro Tools, designing mixes when the project allows.","Designed a new production schedule to support the team's work on 1,000+ titles a year."]},
-  {when:"2024 – 2025",what:"Weak Creatures",sub:"Lead Producer",tag:"podcast",pts:["Designed, mixed, edited, and mastered all 15 episodes of a talk-show podcast.","Booked guests and guided recordings so artists felt comfortable and sounded their best."]},
-  {when:"2024",what:"Sounds Funny Radio",sub:"Audio Producer, Mirrortone Studios",tag:"podcast",pts:["Post-production for a narrative podcast: design, mix, edit, master.","Assisted producer James Quesada with live recording and mixing of the cast."]},
-  {when:"Fall 2020",what:"A Walk in My Neighborhood",sub:"Assistant Director & Associate Producer",tag:"audio play",pts:["An immersive guided audio walk through Atwater Village, Los Angeles, on history and people's relationship to land and community.","Edited copy and advised on the piece's storytelling and logistics."]}
-];
-const theatre=[
-  {when:"2022",what:"Meat",sub:"Sound Designer, The Tank",tag:"sound design",pts:["Built the play's auditory world with the director: sourcing, mixing, and producing the sound."]},
-  {when:"2022",what:"Don't Do This To Us",sub:"Co-Producer, The Tank",tag:"producing",pts:["Led a 20+ person team of technicians and actors through ~15 off-Broadway performances.","Hired staff, ran auditions and vendors, directed load-in and load-out, and shaped marketing on a $35K budget."]},
-  {when:"2021 – 2023",what:"Manhattan Theatre Club",sub:"Assistant to the Executive Producer",tag:"producing",pts:["Managed a $65K budget for Tony and Lortel awards season with PR and marketing.","Helped read audience and attendance trends that informed whether to extend or close a run.","Led DEI work including the first staff-wide picnic and first internal culture survey."]},
-  {when:"2021",what:"Primetime Theater Fest",sub:"Co-Producer & Resident Sound Designer",tag:"festival",pts:["Co-created a virtual festival during Covid built on collaborative writing: 6 new plays, 30 artists.","Raised $9K, designed sound for every play, and ran scheduling, video post, and the social campaign.","Kept 30 people working and 100+ audience members entertained under lockdown."]},
-  {when:"2020",what:"Senior honors thesis, Dartmouth",sub:"Playwright & Producer",tag:"new play",pts:["Wrote and produced a workshop reading of an original play as a Mellon Mays Fellow."]}
-];
-const S='https://samawest.substack.com/p/';
-const writing=[
-  ["Nov 6, 2026","Four Weddings and a Cat Funeral","a tale of something old, something new, something borrowed, and something true","essay","four-weddings-and-a-cat-funeral"],
-  ["Sep 17, 2026","Where Venus Sets","a poem for the end of the harvest","poem","where-venus-sets"],
-  ["Jul 30, 2026","If there's gold","a poem for something enough","poem","if-theres-gold"],
-  ["Feb 14, 2026","a kind of god","a poem for loving and believing","poem","sonnet-a"],
-  ["Jan 20, 2026","Algiers","a poem for another west bank","poem","algiers"],
-  ["Jan 3, 2026","Best of 2025","my endorsements for 2025, in no particular order","list","best-of-2025"],
-  ["Dec 2, 2025","Sepia & Smog","a poem for leaving home","poem","sepia-and-smog"],
-  ["Nov 15, 2025","Double Edged","a poem for endings","poem","double-edged"],
-  ["Oct 24, 2025","The Ghosts","a poem for the spookies and scaries","poem","the-ghosts"],
-  ["Oct 17, 2025","Autumn Wind","a little poem for fall","poem","autumn-wind"],
-  ["Apr 13, 2025","seasons are shy in new york","a poem for spring","poem","seasons-are-shy-in-new-york"],
-  ["Feb 16, 2025","Quasar","a poem for new lovers","poem","quasar"]
-];
-const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-const row=r=>`<details><summary><span class="when">${r.when}</span><span class="what">${esc(r.what)}<small>${esc(r.sub)}</small></span><span class="tag">${r.tag}</span></summary><ul>${r.pts.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></details>`;
-document.getElementById('audio-list').innerHTML=audio.map(row).join('');
-document.getElementById('theatre-list').innerHTML=theatre.map(row).join('');
-const wrow=([d,t,sub,tag,slug])=>`<a class="row" href="${S+slug}"><span class="when">${d}</span><span class="what">${esc(t)}<small>${esc(sub)}</small></span><span class="tag">${tag}</span></a>`;
-document.getElementById('writing-list').innerHTML=writing.map(wrow).join('');
-document.getElementById('recent').innerHTML=writing.slice(0,3).map(wrow).join('');
-document.getElementById('now').innerHTML=[audio[1],audio[0]].map(row).join('');
-
-
-// ticker
-const q=[["All the world’s a stage, and all the men and women merely players.","William Shakespeare"],["If music be the food of love, play on.","William Shakespeare"]];
-const once=q.map(([t,a])=>`<span>“${t}” — ${a}</span><b>✦</b>`).join('');
-document.getElementById('track').innerHTML=once+once+once+once;
-
-function show(){const id=(location.hash||'#home').slice(1);const p=pages.some(x=>x[0]===id)?id:'home';
-  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id==='v-'+p));
-  nav.querySelectorAll('a').forEach(a=>{if(a.dataset.p===p)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-  window.scrollTo(0,0)}
-addEventListener('hashchange',show);show();
-}
-</script>
+<script src="assets/main.js"></script>
 </body>
 </html>
